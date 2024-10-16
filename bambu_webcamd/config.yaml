@@ -1,0 +1,17 @@
+name: "Bambu Lab webcamd server"
+description: "A webcamd server add-on for streaming video from a Bambu Lab printer."
+version: "1.0.0"
+slug: "bambu_webcamd"
+init: false
+options:
+  hostname: null
+  access_code: null
+schema:
+  hostname: str
+  access_code: int
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
