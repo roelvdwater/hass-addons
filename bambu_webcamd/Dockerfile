@@ -3,7 +3,7 @@ ARG BUILD_FROM
 FROM ${BUILD_FROM}
 
 # Copy the add-on metadata (config.json, etc.)
-COPY run.sh /
+COPY run.sh webcam.py haproxy.cfg SourceCodePro-Regular.ttf /
 
 # Install any necessary system dependencies and Python packages
 RUN apk add --no-cache \
@@ -12,7 +12,7 @@ RUN apk add --no-cache \
     py3-pillow
 
 # Make the script executable
-RUN chmod a+x /run.sh
+RUN chmod +x /webcam.py /run.sh
 
 # Run the script when the add-on starts
 CMD [ "/run.sh" ]
