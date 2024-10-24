@@ -10,4 +10,4 @@ HOSTNAME=$(bashio::config 'hostname')
 ACCESS_CODE=$(bashio::config 'access_code')
 
 # Call the Python script with the extracted configuration
-python3 /webcam.py --hostname "$HOSTNAME" --password "$ACCESS_CODE" --port 8000
+python3 /webcam.py --hostname "$HOSTNAME" --password "$ACCESS_CODE" --port 8099
