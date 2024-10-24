@@ -377,8 +377,6 @@ def main():
     hostname = myargs.hostname
     port = 6000
 
-    print(f"Password: {access_code}", flush=True)
-
     MAX_CONNECT_ATTEMPTS = 3
     MAX_READ_TIMEOUTS    = 10
 
