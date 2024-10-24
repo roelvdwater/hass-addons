@@ -1,5 +1,5 @@
 name: "Bambu Lab webcamd server"
-description: "A webcamd server add-on for streaming video from a Bambu Lab printer."
+description: "A webcamd server add-on for streaming video from a Bambu Lab printer"
 version: "1.0.0"
 slug: "bambu_webcamd"
 init: false
