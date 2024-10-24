@@ -45,6 +45,8 @@ class WebRequestHandler(BaseHTTPRequestHandler):
         global streamFps
         global snapshots
 
+        ingressPath = self.headers['X-Ingress-Path']
+
         if self.path.lower().startswith("/?snapshot"):
             snapshots = snapshots + 1
             qs = parse_qs(urlparse(self.path).query)
@@ -102,10 +104,10 @@ class WebRequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
 
             self.wfile.write(("<html><head><title>webcamd - A High Performance MJPEG HTTP Server</title></head><body bgcolor='black'><center>" +
-                             "<img width='95%' id='stream' src='/?stream' onclick=\"(function(){stream.src='/?stream&tm='+Date.now();return false;})();return false;\" " +
-                             "onerror=\"(function(){setTimeout(`stream.src='/?stream&tm='+Date.now()`, 10000);return false;})();return false;\" " +
-                             "onabort=\"(function(){setTimeout(`stream.src='/?stream&tm='+Date.now()`, 10000);return false;})();return false;\" " +
-                             "onstalled=\"(function(){setTimeout(`stream.src='/?stream&tm='+Date.now()`, 10000);return false;})();return false;\" " +
+                             "<img width='95%' id='stream' src='" + ingressPath + "/?stream' onclick=\"(function(){stream.src='" + ingressPath + "/?stream&tm='+Date.now();return false;})();return false;\" " +
+                             "onerror=\"(function(){setTimeout(`stream.src='" + ingressPath + "/?stream&tm='+Date.now()`, 10000);return false;})();return false;\" " +
+                             "onabort=\"(function(){setTimeout(`stream.src='" + ingressPath + "/?stream&tm='+Date.now()`, 10000);return false;})();return false;\" " +
+                             "onstalled=\"(function(){setTimeout(`stream.src='" + ingressPath + "/?stream&tm='+Date.now()`, 10000);return false;})();return false;\" " +
                              "/></center></body></html>").encode("utf-8"))
             return
         
@@ -130,10 +132,10 @@ class WebRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         host = self.headers.get('Host')
         self.wfile.write((
-            "<html><head><title>webcamd - A High Performance MJPEG HTTP Server</title></head><body>Specify <a href='http://" + host +
-            "/?frame'>/?frame</a> to host a stream in an <img> object, <a href='http://" + host +
-            "/?stream'>/?stream</a> to stream, <a href='http://" + host +
-            "/?snapshot'>/?snapshot</a> for a picture, or <a href='http://" + host +
+            "<html><head><title>webcamd - A High Performance MJPEG HTTP Server</title></head><body>Specify <a href='" + ingressPath +
+            "/?frame'>/?frame</a> to host a stream in an <img> object, <a href='" + ingressPath +
+            "/?stream'>/?stream</a> to stream, <a href='" + ingressPath +
+            "/?snapshot'>/?snapshot</a> for a picture, or <a href='"+ ingressPath +
             "/?info'>/?info</a> for statistics and configuration information</body></html>").encode("utf-8"))
 
     def log_message(self, format, *args):
