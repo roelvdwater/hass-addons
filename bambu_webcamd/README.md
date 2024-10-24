@@ -15,3 +15,9 @@ Make sure to set the hostname of your Bambu Lab printer and its access code in t
 When following the steps above, you're all set and you can start the add-on. You can then navigate to the web interface by selecting the **OPEN WEB-UI** button. From there, you'll have several options to watch the camera's feed.
 
 The underlying webcamd server supports watching a livestream. However, the add-on only supports getting snapshots at the moment. Support for watching the livestream will potentially be added in the future.
+
+## Showing the snapshot on your dashboards
+
+An easy way to show a snapshot on your dashboards, is by copying the `/?snapshot` URL (make sure to copy the entire URL, including the Ingress base URL) and setting it as the image source in a picture card.
+
+![Screenshot](https://raw.githubusercontent.com/roelvdwater/hass-addons/refs/heads/master/bambu_webcamd/images/screenshot.png)
