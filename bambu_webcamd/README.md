@@ -12,4 +12,6 @@ After adding the repository, find the **Bambu Lab webcamd server** add-on and se
 
 Make sure to set the hostname of your Bambu Lab printer and its access code in the configuration before starting the add-on.
 
-When following the steps above, you're all set and you can start the add-on. You'll then be able to navigate to `http://YOURHOMEASSISTANT:8000`, which will give you several options to watch the camera's feed.
+When following the steps above, you're all set and you can start the add-on. You can then navigate to the web interface by selecting the **OPEN WEB-UI** button. From there, you'll have several options to watch the camera's feed.
+
+The underlying webcamd server supports watching a livestream. However, the add-on only supports getting snapshots at the moment. Support for watching the livestream will potentially be added in the future.
