@@ -1,4 +1,4 @@
-name: "Home Assistant DSMR to HomeWizard P1 Meter"
+name: "DSMR to HomeWizard P1 Meter"
 description: "An emulated HomeWizard P1 Meter API using Home Assistant's DSMR integration values"
 url: https://github.com/roelvdwater/hass-addons/tree/master/dsmr-to-homewizard
 version: "1.0.71"

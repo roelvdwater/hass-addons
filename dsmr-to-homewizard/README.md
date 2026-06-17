@@ -1,4 +1,4 @@
-# Home Assistant app: Home Assistant DSMR to HomeWizard P1 Meter
+# Home Assistant app: DSMR to HomeWizard P1 Meter
 
 This Home Assistant app takes DSMR information from a specified Home Assistant instance and exposes it in the format of the HomeWizard V1 API. Currently, it only supports the V1 API.
 
@@ -18,7 +18,7 @@ The simplest way to install this app is by adding the app repository to your Hom
 
 [![Open your Home Assistant instance and show the add app repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Froelvdwater%2Fhass-addons)
 
-After adding the repository, find the **Home Assistant DSMR to HomeWizard P1 Meter** add-on and select it. Select the **Install** button to install it.
+After adding the repository, find the **DSMR to HomeWizard P1 Meter** add-on and select it. Select the **Install** button to install it.
 
 ### Configuring the app
 
