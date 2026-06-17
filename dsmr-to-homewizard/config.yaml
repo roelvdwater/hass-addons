@@ -1,0 +1,25 @@
+name: "Home Assistant DSMR to HomeWizard P1 Meter"
+description: "An emulated HomeWizard P1 Meter API using Home Assistant's DSMR integration values"
+url: https://github.com/roelvdwater/hass-addons/tree/master/dsmr-to-homewizard
+version: "1.0.71"
+slug: "dsmr_to_homewizard"
+init: false
+host_network: true
+options:
+  long_lived_access_token: null
+  home_assistant_url: null
+  serial: null
+  disable_ssl_check: false
+schema:
+  long_lived_access_token: password
+  home_assistant_url: url
+  serial: str
+  disable_ssl_check: bool
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports:
+  80/tcp: 80
